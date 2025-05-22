@@ -17,27 +17,3 @@
     margin-top: -80px;
     z-index: 0;
 }
-
-.menu {
-    position: relative; /*precisa ser relativa para o z-index funcionar*/
-    display: flex; 
-    justify-content: center; /* alinha os itens no centro */
-    margin-top: -55px;
-    z-index: 1;
-}
-
-.menu a {
-    text-decoration: none; /* remove o sublinhado do link */
-    color: white; /* cor do texto */
-    font-size: 20px; /* tamanho da fonte */
-    font-family: 'montserrat', sans-serif;
-    font-weight: 600; /* peso da fonte */
-
-}
-
-.menu ul {
-    display: flex; /*alinha os itens na horizontal*/
-    gap: 40px; /*espaçamento entre os itens*/
-    list-style: none; /* remove os marcadores da lista */
-
-}
