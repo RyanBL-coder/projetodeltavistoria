@@ -1,0 +1,82 @@
+.carrossel {
+            width: 100%; /* Ou 100% para ocupar a largura do container pai */
+            max-width: 100%; /* Garante que não quebre em telas menores */
+            height: auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            margin: 20px auto; /* Exemplo para centralizar, ajuste conforme seu layout */
+        }
+
+        .slides {
+            display: flex;
+            width: 400%; /* Para 4 slides */
+            height: 100%;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .slide {
+            width: 25%; /* (100% / 4 slides) - Cada slide ocupa 1/4 da largura do container .slides */
+            height: 100%;
+            flex-shrink: 0;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+        /* Navegação Manual (bolinhas) */
+        .navegacao-manual {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            z-index: 1; /* Abaixo dos botões prev/next se sobrepuserem */
+        }
+/* Posição dos slides com base no radio button checado */
+        #slide1:checked ~ .slides {
+            transform: translateX(0%);
+        }
+
+        #slide2:checked ~ .slides {
+            transform: translateX(-25%); /* Move 1/4 da largura de .slides */
+        }
+
+        #slide3:checked ~ .slides {
+            transform: translateX(-50%); /* Move 2/4 da largura de .slides */
+        }
+
+        #slide4:checked ~ .slides {
+            transform: translateX(-75%); /* Move 3/4 da largura de .slides */
+        }
+
+        /* Feedback visual para o manual-btn ativo */
+        #slide1:checked ~ .navegacao-manual label[for="slide1"],
+        #slide2:checked ~ .navegacao-manual label[for="slide2"],
+        #slide3:checked ~ .navegacao-manual label[for="slide3"],
+        #slide4:checked ~ .navegacao-manual label[for="slide4"] {
+            background: white;
+        }
+<section id="carrossel">
+        <div class="carrossel">
+            <input type="radio" name="slide" id="slide1">
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4"> 
+
+            <div class="slides">
+                <div class="slide"><img src="img/carro1.jpg.jpg" alt="Imagem Carro 1"></div>
+                <div class="slide"><img src="img/carro2.jpg" alt="Imagem Carro 2"></div>
+                <div class="slide"><img src="img/carro3.jpg" alt="Imagem Carro 3"></div>
+                <div class="slide"><img src="img/logo.png" alt="Imagem Logo Delta"></div>
+            </div>
+
+            
+    </section>
