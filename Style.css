@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-header {
+    width: 100%;
+    height: auto; /* altura automática para o cabeçalho */
+    position: relative; 
+    z-index: 1; /* ordem de posição no eixo z (posição tem que ser relativa) */
+}
+
+.menu-bg {
+    position: relative; 
+    width: 100%; /* largura do cabeçalho (100% DA TELA)*/
+    margin-top: -80px;
+    z-index: 0;
+}
+
+.menu {
+    position: relative; /*precisa ser relativa para o z-index funcionar*/
+    display: flex; 
+    justify-content: center; /* alinha os itens no centro */
+    margin-top: -55px;
+    z-index: 1;
+}
+
+.menu a {
+    text-decoration: none; /* remove o sublinhado do link */
+    color: white; /* cor do texto */
+    font-size: 20px; /* tamanho da fonte */
+    font-family: 'montserrat', sans-serif;
+    font-weight: 600; /* peso da fonte */
+
+}
+
+.menu ul {
+    display: flex; /*alinha os itens na horizontal*/
+    gap: 40px; /*espaçamento entre os itens*/
+    list-style: none; /* remove os marcadores da lista */
+
+}
