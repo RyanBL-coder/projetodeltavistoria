@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-header {
+    width: 100%;
+    height: auto;
+    /* altura automática para o cabeçalho */
+    position: relative;
+    z-index: 1;
+    /* ordem de posição no eixo z (posição tem que ser relativa) */
+}
+
+.menu-bg {
+    position: relative;
+    width: 100%;
+    /* largura do cabeçalho (100% DA TELA)*/
+    margin-top: -80px;
+    z-index: 0;
+}
+
+.menu {
+    position: relative;
+    /*precisa ser relativa para o z-index funcionar*/
+    display: flex;
+    justify-content: center;
+    /* alinha os itens no centro */
+    margin-top: -55px;
+    z-index: 1;
+}
+
+.menu a {
+    text-decoration: none;
+    /* remove o sublinhado do link */
+    color: #ffffff;
+    /* cor do texto */
+    font-size: 20px;
+    /* tamanho da fonte */
+    font-family: 'montserrat', sans-serif;
+    font-weight: 600;
+    /* peso da fonte */
+    transition: color 0, 3s ease;
+}
+
+.menu ul {
+    display: flex;
+    /*alinha os itens na horizontal*/
+    gap: 40px;
+    /*espaçamento entre os itens*/
+    list-style: none;
+    /* remove os marcadores da lista */
+
+}
+
+.carrossel {
+    margin: 0 auto;
+    /*(0 margem em cima e em baixo e auto nas laterais) */
+    width: 100%;
+    height: 415.9px;
+    padding-top: 20px;
+    overflow: hidden;
+    /* esconde o conteúdo que ultrapassa o limite do elemento */
+}
+
+.slides {
+    width: 400%;
+    /* largura total do carrossel (4 vezes a largura de um slide) */
+    height: 415.9px;
+    display: flex;
+    /* alinha os itens na horizontal */
+
+}
+
+.slide {
+    width: 25%;
+    /* largura de cada slide (25% do total) */
+    position: relative;
+    /* posição relativa para o elemento */
+}
+
+.slide img {
+    width: 100%;
+    ;
+    height: 415.9px;
+    /* altura da imagem */
+}
+
+.slides input {
+    display: none;
+    /* esconde os botões do inputs */
+}
+
+.navegacao {
+    z-index: 2;
+    position: absolute;
+    /* posição para o elemento ficar em cima do carrossel */
+    width: 100%;
+    margin-top: -50px;
+    display: flex;
+    /* alinha os itens na horizontal */
+    justify-content: center;
+    /* alinha os itens no centro */
+
+}
+
+.nav-btn {
+    border: 2px solid #ffffff;
+    /* borda do nav */
+    padding: 4px;
+    border-radius: 20px;
+    /* borda arredondada */
+    cursor: pointer;
+    /* mouse muda para mão quando passa por cima */
+    margin: 10px;
+    /* espaçamento entre os botões */
+}
+
+#radio1:checked
+
+/* qunado tiver selecionado o radio1 */
+~.first {
+    margin-left: 0;
+    /* move o slide para a esquerda */
+}
+
+#radio2:checked~.first {
+    margin-left: -25%;
+    /* move o slide para a esquerda */
+}
+
+#radio3:checked~.first {
+    margin-left: -50%;
+    /* move o slide para a esquerda */
+}
+
+.nossos-diferenciais {
+    background-color: #a52a2a;
+    /* Vermelho aproximado */
+    color: #1a1a48;
+    padding: 80px 0;
+    text-align: center;
+    display: flex;
+    gap: 100px;
+}
+
+.nossos-diferenciais .container {
+    flex-direction: column;
+    background-color: #a52a2a;
+    margin: 0 auto;
+}
+
+.diferenciais-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #a52a2a;
+    text-align: center;
+}
+
+.diferenciais-wrapper div {
+    background-color: #a52a2a;
+    max-width: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.diferenciais-wrapper img {
+    background-color: #a52a2a;
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .footer-logo img {
+    height: 30px;
+    /* Ajuste a altura conforme necessário */
+}
+
+/* mapa e localização */
+
+.map-container {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.map-container h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.map-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.map-container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-container a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.map-container a:hover {
+    text-decoration: underline;
+}
+.titulo-secao {
+    font-family: 'Montserrat', sans-serif; /* Certifique-se que é a mesma fonte do outro título */
+    text-align: center;                   /* Para centralizar o texto */
+    font-size: 2em;                       /* Exemplo: ajuste o tamanho conforme necessário */
+    font-weight: bold;                    /* Exemplo: ajuste o peso da fonte */
+    color: #333;                          /* Exemplo: ajuste a cor conforme necessário */
+    margin-bottom: 20px;                  /* Exemplo: ajuste a margem inferior */
+}
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #0055a5;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #0055a5;
+    outline: none;
+}
+
+form button {
+    background-color: #1A1A48;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #1A1A48;
+}
+
+.form-map-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que fique um embaixo do outro em telas pequenas */
+    gap: 40px;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.form-map-container .formulario,
+.form-map-container .mapa {
+    flex: 1 1 400px;
+    /* Ocupa metade da largura disponível, mínimo 400px */
+    max-width: 600px;
+}
+
+.form-map-container form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-map-container input,
+.form-map-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form-map-container button {
+    background-color: #1A1A48;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form-map-container .mapa img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
