@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Vistoria</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <div class="header">
+            <img src="img/bg_fixed.png" alt="Background Header" class="bg-header">
+            <img src="img/menu_bg.png" alt="Menu bg" class="menu-bg">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="Index.html">INÍCIO</a></li>
+                <li><a href="quemsomos.html">QUEM SOMOS</a></li>
+                <li><a href="localizacao.html">LOCALIZAÇÃO</a></li>
+                <li><a href="Faleconosco.html">FALE CONOSCO</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="carrossel">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+            <div class="slide first">
+                <img src="img/slide1.png" alt="slide1" />
+            </div>
+            <div class="slide">
+                <img src="img/slide2.png" alt="slide2" />
+            </div>
+            <div class="slide">
+                <img src="img/slide3.png" alt="slide3" />
+            </div>
+        </div>
+
+        <div class="navegacao">
+            <label for="radio1" class="nav-btn"></label>
+            <label for="radio2" class="nav-btn"></label>
+            <label for="radio3" class="nav-btn"></label>
+        </div>
+
+    </section>
+
+    <!-- Nossos diferenciais, agilidade, segurança, suporte-->
+
+    <section class="nossos-diferenciais">
+        <div class="container">
+            <h2 class="fw-bold">Nossos <span class="highlight">Diferenciais</span></h2>
+            <p class="lead">O que nos torna a melhor escolha para seus serviços automotivos</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="diferenciais-wrapper">
+            <div>
+                <img src="img/agi.png" alt="agilidade">
+                <p>Processos rápidos e eficientes para não deixar você esperando</p>
+            </div>
+
+            <div>
+                <img src="img/seg.png" alt="seguranca">
+                <p>Todos os processos realizados dentro da legalidade</p>
+            </div>
+
+            <div>
+                <img src="img/sup.png" alt="suporte">
+                <p>Atendimento personalizado para tirar todas suas dúvidas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção - Formulário-->
+
+    <section class="form-map-container">
+        <div class="formulario">
+            <h2 class="titulo-secao">Sugestões</h2> <p>
+
+        </p>
+
+            </p>
+            <form action="obrigado.html" method="post">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <!-- SEÇÃO DE LOCALIZAÇÃO COM MAPA -->
+
+        <div class="mapa">
+            <section class="map-container">
+                <h2>Nosso Endereço</h2>
+
+                <a href="https://www.google.com/maps/place/7%C2%B024'06.6%22S+35%C2%B005'51.3%22W/@-7.4018457,-35.1001483,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-7.4018457!4d-35.0975734?hl=pt-BR&entry=ttu"
+                    target="_blank">
+                    <img src="img/nossa_localizacao.png" alt="Nossa Localização"
+                        style="width: 100%; max-width: 400px; height: auto; border-radius: 8px;">
+                </a>
+
+                <br><br>
+
+                <a href="https://www.google.com/maps/place/7%C2%B024'06.6%22S+35%C2%B005'51.3%22W/@-7.4018457,-35.1001483,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-7.4018457!4d-35.0975734?hl=pt-BR&entry=ttu"
+                    target="_blank">
+                    Ver no Google Maps
+                </a>
+            </section>
+
+            <!-- Seção do Rodapé -->
+
+            <footer>
+                <div class="container">
+                    <div class="footer-logo">
+                        <img src="/img/logo_rodape.png" alt="Rodapé">
+                    </div>
+                </div>
+            </footer>
+</body>
+
+</html>
