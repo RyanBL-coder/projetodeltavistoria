@@ -1,26 +1,115 @@
-.menu {
-    position: relative;/precisa ser relativa para o z-index funcionar/ display: flex;
-    justify-content: center;
-    /* alinha os itens no centro */
-    margin-top: -55px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*.header {
+    width: 100%;
+    position: fixed;
+    top: 0; /* fixa o cabeçalho no topo da página */
+    
+
+.bg-header {
+    width: 100%;
+    height: auto; /* altura automática para o cabeçalho */
+    position: fixed;
+    z-index: 1; /* ordem de posição no eixo z (posição tem que ser relativa) */
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    position: fixed;
     z-index: 1;
+    margin-left: 250px;
+    margin-top: 20px;
+}
+
+.menu-bg {
+    position: relative; 
+    width: 100%; /* largura do cabeçalho (100% DA TELA)*/
+    margin-top: 75px;
+    z-index: 0;
+}
+
+.menu {
+    position: relative; /*precisa ser relativa para o z-index funcionar*/
+    display: flex; 
+    justify-content: center; /* alinha os itens no centro */
+    margin-top: -55px;
+    z-index: 0;
 }
 
 .menu a {
-    text-decoration: none;
-    /* remove o sublinhado do link */
-    color: rgb(255, 255, 255);
-    /* cor do texto */
-    font-size: 20px;
-    /* tamanho da fonte */
+    text-decoration: none; /* remove o sublinhado do link */
+    color: white; /* cor do texto */
+    font-size: 20px; /* tamanho da fonte */
     font-family: 'montserrat', sans-serif;
-    font-weight: 600;
-    /* peso da fonte */
+    font-weight: 600; /* peso da fonte */
 
 }
 
 .menu ul {
-    display: flex;/alinha os itens na horizontal/ gap: 40px;/espaçamento entre os itens/ list-style: none;
-    /* remove os marcadores da lista */
+    display: flex; /*alinha os itens na horizontal*/
+    gap: 40px; /*espaçamento entre os itens*/
+    list-style: none; /* remove os marcadores da lista */
 
+}
+
+.carrossel {
+    margin: 0 auto; /*(0 margem em cima e em baixo e auto nas laterais) */
+    width: 100%;
+    height: 415.9px;
+    padding-top: 20px;
+    overflow: hidden; /* esconde o conteúdo que ultrapassa o limite do elemento */
+}
+
+.slides {
+    width: 400%; /* largura total do carrossel (4 vezes a largura de um slide) */
+    height: 415.9px;
+    display: flex; /* alinha os itens na horizontal */
+    
+}
+
+.slide {
+    width: 25%; /* largura de cada slide (25% do total) */
+    position: relative; /* posição relativa para o elemento */
+}
+
+.slide img {
+    width: 100%;;
+    height: 415.9px; /* altura da imagem */
+}
+
+.slides input {
+    display: none; /* esconde os botões do inputs */
+}
+
+.navegacao {
+    position: absolute; /* posição para o elemento ficar em cima do carrossel */
+    width: 100%;
+    margin-top: -50px;
+    display: flex; /* alinha os itens na horizontal */
+    justify-content: center; /* alinha os itens no centro */
+
+}
+
+.nav-btn {
+    border: 2px solid #ffffff; /* borda do nav */
+    padding: 4px;
+    border-radius: 20px; /* borda arredondada */
+    cursor: pointer; /* mouse muda para mão quando passa por cima */
+    margin: 10px; /* espaçamento entre os botões */
+}
+
+#radio1:checked /* qunado tiver selecionado o radio1 */ ~ .first {
+    margin-left: 0; /* move o slide para a esquerda */
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%; /* move o slide para a esquerda */
+}
+#radio3:checked ~ .first {
+    margin-left: -50%; /* move o slide para a esquerda */
 }
