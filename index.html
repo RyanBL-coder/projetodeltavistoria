@@ -6,21 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delta Vistoria</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+
     <section>
-        <div class="header">
+        <div class="header" id="inicio">
+            <img src="img/logo.png" alt="Logo Delta Vistoria" class="logo">
             <img src="img/bg_fixed.png" alt="Background Header" class="bg-header">
             <img src="img/menu_bg.png" alt="Menu bg" class="menu-bg">
+
         </div>
         <nav class="menu">
             <ul>
                 <li><a href="Index.html">INÍCIO</a></li>
-                <li><a href="quemsomos.html">QUEM SOMOS</a></li>
-                <li><a href="localizacao.html">LOCALIZAÇÃO</a></li>
-                <li><a href="Faleconosco.html">FALE CONOSCO</a></li>
+                <li><a href="#quemsomos">QUEM SOMOS</a></li>
+                <li><a href="#informacoes">LOCALIZAÇÃO</a></li>
+                <li><a href="#agendamento">AGENDE SUA VISTORIA</a></li>
             </ul>
         </nav>
     </section>
@@ -53,14 +59,14 @@
     <!-- Nossos diferenciais, agilidade, segurança, suporte-->
 
     <section class="nossos-diferenciais">
-        <div class="container">
-            <h2 class="fw-bold">Nossos <span class="highlight">Diferenciais</span></h2>
-            <p class="lead">O que nos torna a melhor escolha para seus serviços automotivos</p>
+        <div>
+            <h2 class="titulo-diferenciais">NOSSOS DIFERENCIAIS</h2>
+            <p class="paragrafo"><i>O que nos torna a melhor escolha para seus serviços automotivos</i></p>
         </div>
     </section>
 
     <section>
-        <div class="diferenciais-wrapper">
+        <div class="cartoes-diferenciais">
             <div>
                 <img src="img/agi.png" alt="agilidade">
                 <p>Processos rápidos e eficientes para não deixar você esperando</p>
@@ -68,7 +74,7 @@
 
             <div>
                 <img src="img/seg.png" alt="seguranca">
-                <p>Todos os processos realizados dentro da legalidade</p>
+                <p class="seg">Todos os processos realizados dentro da legalidade</p>
             </div>
 
             <div>
@@ -80,51 +86,109 @@
 
     <!-- Seção - Formulário-->
 
-    <section class="form-map-container">
+    <section class="form-map-container" id="informacoes">
         <div class="formulario">
-            <form action="obrigado.html" method="post">
-                <label for="nome">Nome:</label><br>
-                <input type="text" id="nome" name="nome" required><br><br>
+            <h2 class="titulo-sugestao">Envie uma Mensagem</h2>
 
-                <label for="email">E-mail:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+            <form action="obrigado.html" method="post" class="formulario-sugestao">
+                <div class="form-flex">
+                    <div class="input-flex">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="input-flex">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+                </div>
 
-                <label for="mensagem">Mensagem:</label><br>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
                 <button type="submit">Enviar</button>
             </form>
         </div>
 
         <!-- SEÇÃO DE LOCALIZAÇÃO COM MAPA -->
+        <div>
+            <h2 class="titulo-contatos">Informações de Contato</h2>
+            <div class="contatos-container">
+                <div class="contatos">
+                    <div class="contato-item">
+                        <img class="imagem-contato" src="img/local.png" alt="Icone de localização">
+                        <div class="texto-contato">
+                            <h3>Endereço</h3>
+                            <p>Rua Exemplo, 125 - Centro</p>
+                            <p>Pedras de Fogo - PB</p>
+                        </div>
 
-        <div class="mapa">
-            <section class="map-container">
-                <h2>Nosso Endereço</h2>
-
-                <a href="https://www.google.com/maps/place/7%C2%B024'06.6%22S+35%C2%B005'51.3%22W/@-7.4018457,-35.1001483,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-7.4018457!4d-35.0975734?hl=pt-BR&entry=ttu"
-                    target="_blank">
-                    <img src="img/nossa_localizacao.png" alt="Nossa Localização"
-                        style="width: 100%; max-width: 400px; height: auto; border-radius: 8px;">
-                </a>
-
-                <br><br>
-
-                <a href="https://www.google.com/maps/place/7%C2%B024'06.6%22S+35%C2%B005'51.3%22W/@-7.4018457,-35.1001483,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-7.4018457!4d-35.0975734?hl=pt-BR&entry=ttu"
-                    target="_blank">
-                    Ver no Google Maps
-                </a>
-            </section>
-
-            <!-- Seção do Rodapé -->
-
-            <footer>
-                <div class="container">
-                    <div class="footer-logo">
-                        <img src="" alt="Logo Delta">
+                    </div>
+                    <div class="contato-item">
+                        <img class="imagem-contato" src="img/phone.png" alt="Icone de telefone">
+                        <div class="texto-contato">
+                            <h3>Telefone</h3>
+                            <p>(83) 1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <img class="imagem-contato" src="img/email.png" alt="Icone de e-mail">
+                        <div class="texto-contato">
+                            <h3>E-mail</h3>
+                            <p>delta@contato.com.br</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <img class="imagem-contato" src="img/clock.png" alt="Icone de horário">
+                        <div class="texto-contato">
+                            <h3>Horário de Funcionamento</h3>
+                            <p>Segunda a Sexta: 08:00 - 17:00<br>Sábado: 08:00 - 12:00</p>
+                        </div>
                     </div>
                 </div>
-            </footer>
+            </div>
+    </section>
+
+    <!-- QUEM SOMOS-->
+
+    <section class="quem-somos" id="quemsomos">
+        <img src="img/delta_banner.png" alt="Banner Delta Vistoria" class="banner-delta">
+        <div class="texto-quem-somos">
+            <h2>Sobre a Delta Vistoria</h2>
+            <p>A Delta Vistoria é uma empresa especializada em serviços de vistoria veicular, oferecendo soluções
+                rápidas e seguras para regularização de veículos. Com uma equipe experiente e comprometida, garantimos a
+                melhor experiência para nossos clientes.</p>
+            <p>Nosso objetivo é proporcionar agilidade, segurança e suporte completo em todos os processos, sempre
+                respeitando as normas legais vigentes.</p>
+            <p>Confie na Delta Vistoria para resolver suas necessidades veiculares com a agilidade e o conhecimento
+                técnico que fazem a diferença.</p>
+        </div>
+    </section>
+
+    <section class="agendamento">
+        <div class="texto-agendamento">
+            <h2>Pronto para regularizar seu veículo?</h2>
+            <p>Entre em contato agora mesmo e agende sua vistoria com nossa equipe especializada.</p>
+        </div>
+
+        <div class="botoes-contato">
+            <a href="http://wa.me/+5583993510550" class="botao-zap"> <img src="img/icon_zap.png" alt="icone Whatsapp"
+                    class="zap-icon"> Whatsapp </a>
+            <a href="tel:+5583993510550" class="botao-tel"><img src="img/tel.png" alt="Icone celular" class="tel-icon">
+                Ligar agora</a>
+        </div>
+
+        <!-- Seção do Rodapé -->
+
+        <footer class="footer" id="agendamento">
+
+            <div>
+                <a href="#inicio"> <img src="/img/logo_rodape.png" alt="Rodapé" class="footer-logo"></a>
+            </div>
+        </footer>
+
 </body>
 
 </html>
